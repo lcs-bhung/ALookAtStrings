@@ -141,8 +141,10 @@ print("Second last character is: \(secondLast)")
  */
 // This will separate the output from the examples above from your work
 print("===== Exercise 1 begins =====")
-
-
+let name = "Branton Hung"
+for singleCharacter in name {
+    print (singleCharacter)
+}
 
 /*:
 ### Exercise 2
@@ -159,6 +161,13 @@ print("===== Exercise 2 begins =====")
 let aQuestion = "请问现在几点了?"
 
 // Write code to complete the exercise below...
+var theIndex = aQuestion.index(aQuestion.startIndex, offsetBy: 3)
+let character = aQuestion[theIndex]
+print (character)
+
+var theeIndex = aQuestion.index(aQuestion.endIndex, offsetBy: -5)
+let characterr = aQuestion[theeIndex]
+print (characterr)
 
 /*:
 ### Exercise 3
