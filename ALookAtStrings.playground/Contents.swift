@@ -168,6 +168,7 @@ print (character)
 var theeIndex = aQuestion.index(aQuestion.endIndex, offsetBy: -5)
 let characterr = aQuestion[theeIndex]
 print (characterr)
+print ("==================")
 
 /*:
 ### Exercise 3
@@ -186,5 +187,16 @@ Say that you wish to encrypt the word `pen` using a *rightward shift of three ch
 
 // Create the starting phrase
 let plainText = "pen"
-
+let theAlphabet = ("abcsefghijklmnopqrstuvwxyz")
 // Encrypt the starting phrase
+var cipherText = ""
+for scalar in plainText.unicodeScalars {
+   let shiftedScalarValue = scalar.value + 3
+    if let newScalar = UnicodeScalar(shiftedScalarValue) {
+        newScalar
+        cipherText += String(newScalar)
+    }
+}
+
+
+
